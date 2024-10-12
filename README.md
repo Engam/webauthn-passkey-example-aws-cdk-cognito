@@ -61,7 +61,7 @@ To run the Angular frontend example:
 
 2. **Add `aws-exports.ts` File**
 
-   Create an `aws-exports.ts` file and add your AWS Cognito configuration:
+   Create an `aws-exports.ts` file in the src folder in the frontend appand add your AWS Cognito configuration:
 
    ```typescript
    export const aws_config = {
