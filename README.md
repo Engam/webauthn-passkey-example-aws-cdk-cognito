@@ -2,6 +2,7 @@
 # WebAuthn/Passkey Example
 
 A simple example demonstrating the use of WebAuthn/Passkeys as a sign-in option for AWS Cognito.
+This example is built using aws cdk.
 
 ## Prerequisites
 Ensure you have the following tools installed:
