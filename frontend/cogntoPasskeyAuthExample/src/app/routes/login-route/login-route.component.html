@@ -1,0 +1,35 @@
+<div class="content">
+  <h1>Login</h1>
+  <p>Expects norwegian phone numbers, 8 digits, and will automatically add +47 in front when singing in to aws cognito. Change this behaviour according to your demand.</p>
+  <div class="form" (click)="focusUsernameInput()" >
+    <img [src]="'assets/phone.svg'" class="form-icon">
+    <input type="tel" #usernameInput [(ngModel)]="phoneNumber" [disabled]="state !== LoginStates.INIT" placeholder="Phone number" [minlength]="8" [maxlength]="8" pattern="[0-9]*">
+  </div>
+  <div class="form" *ngIf="loginType === LoginTypes.PASSWORD">
+    <label for="psw">Psw</label>
+    <input type="password" #password [(ngModel)]="password" placeholder="Your password" [minlength]="16">
+  </div>
+  
+  <div class="button-row">
+    <div class="checkbox">
+      <input type="checkbox" [(ngModel)]="showPassword" (ngModelChange)="changeLoginType()">Show password
+
+    </div>
+    <button (click)="login()" [disabled]="state !== LoginStates.INIT">Login</button>
+  
+  
+  </div>
+  
+  
+  <div *ngIf="state === LoginStates.NEW_PASSWORD_REQUIRED">
+    <div class="form">
+      <label for="newPassword">New psw</label>
+      <input type="password" #newPassword [(ngModel)]="newPassword" placeholder="New Password">
+    </div>
+  
+    <div class="button-row">
+      
+      <button (click)="completeNewPassword()">Complete New Password</button>
+    </div>
+
+</div>

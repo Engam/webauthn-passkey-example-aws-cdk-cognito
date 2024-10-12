@@ -1,0 +1,17 @@
+{
+  "name": "verify-passkey-generation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.670.0",
+    "@simplewebauthn/server": "^10.0.1",
+    "crypto": "^1.0.1"
+  }
+}
