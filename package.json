@@ -1,6 +1,6 @@
 {
   "name": "passkey-auth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "bin": {
     "passkey-auth": "bin/passkey-auth.js"
   },
