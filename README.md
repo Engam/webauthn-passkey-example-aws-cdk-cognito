@@ -58,7 +58,24 @@ To run the Angular frontend example:
    npm install -g @angular/cli
    ```
 
-2. **Serve the Application**:  
+
+2. **Add `aws-exports.ts` File**
+
+   Create an `aws-exports.ts` file and add your AWS Cognito configuration:
+
+   ```typescript
+   export const aws_config = {
+     Auth: {
+       userPoolId: 'add_your_user_pool_id',
+       userPoolWebClientId: 'add_your_user_pool_web_client_id',
+       region: 'your-region-1',
+     }
+   }
+   ```
+
+
+
+3. **Serve the Application**:  
    Run the development server:
    ```bash
    ng serve
