@@ -1,31 +1,77 @@
-# Webauthn/passkey example
 
-Simple example using webauthn/passkeys as a signin option for aws cognito.
+# WebAuthn/Passkey Example
 
-## Prerequesits
-- aws cli
-- cdk cli
-- angular cli
+A simple example demonstrating the use of WebAuthn/Passkeys as a sign-in option for AWS Cognito.
 
-## install dependencies
-Install dependencies in all lambda functions in ./lambda and for angular frontend example.
+## Prerequisites
+Ensure you have the following tools installed:
+- AWS CLI
+- AWS CDK CLI
+- Angular CLI
 
-## deploy cdk
-sign in to your aws account and create an iam user with administrator access
-use aws cli to create a profile
-`aws configure --profile default`
+## Install Dependencies
+Install the necessary dependencies for all Lambda functions located in the `./lambda` folder, as well as for the Angular frontend example.
 
-run `cdk bootstrap`
-run `cdk deploy`
+### Lambda Functions:
+Navigate to each Lambda directory and run:
+```bash
+npm install
+```
 
-## Angualar frontend example
-Install @angular/cli globally
-install dependencies
-ng serve  to test
+### Angular Frontend:
+For the Angular frontend example, install dependencies by running:
+```bash
+npm install
+```
 
-## Passkey rpId
-Passkey rpId's are set to localhost, you need to change this to your domain if you don't want to test locally.
+## Deploying the CDK Stack
+Follow these steps to deploy the CDK resources:
 
-## cleanup
-cdk destroy
-delete your created iam user or change its access rights (when no longer needed)
+1. **Sign in to AWS**:  
+   Log in to your AWS account and create an IAM user with Administrator Access (if you don't already have one).
+
+2. **Configure AWS CLI**:  
+   Use the AWS CLI to configure a profile:
+   ```bash
+   aws configure --profile default
+   ```
+
+3. **Bootstrap the CDK Environment**:  
+   Run the following command to bootstrap the CDK environment:
+   ```bash
+   cdk bootstrap
+   ```
+
+4. **Deploy the CDK Stack**:  
+   Deploy the stack by running:
+   ```bash
+   cdk deploy
+   ```
+
+## Angular Frontend Example
+
+To run the Angular frontend example:
+
+1. **Install Angular CLI Globally**:
+   ```bash
+   npm install -g @angular/cli
+   ```
+
+2. **Serve the Application**:  
+   Run the development server:
+   ```bash
+   ng serve
+   ```
+
+## Configuring Passkey rpId
+By default, the `rpId` for Passkeys is set to `localhost`. If you wish to test in a production environment, change the `rpId` to match your domain.
+
+## Cleanup Resources
+To clean up the resources after testing:
+
+1. Destroy the CDK stack:
+   ```bash
+   cdk destroy
+   ```
+
+2. Delete or modify the IAM user you created for the deployment, as needed.
