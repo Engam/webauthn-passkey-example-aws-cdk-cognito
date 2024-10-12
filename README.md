@@ -1,21 +1,17 @@
-# Welcome to your CDK TypeScript project
+# Webauthn/passkey example
 
-This is a blank project for CDK development with TypeScript.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+Simple example using webauthn/passkeys as a signin option for aws cognito.
 
 ## install dependencies
 Install dependencies in all lambda functions in ./lambda and for angular frontend example.
 
+## deploy cdk
+sign in to your aws account and create an iam user with administrator access
+use aws cli to create a profile
+`aws configure --profile default`
+
+run cdk bootstrap
+run cdk deploy
 
 ## Angualar frontend example
 Install @angular/cli globally
@@ -24,3 +20,7 @@ ng serve  to test
 
 ## Passkey rpId
 Passkey rpId's are set to localhost, you need to change this to your domain if you don't want to test locally.
+
+## cleanup
+cdk destroy
+delete your created iam user or change its access rights (when no longer needed)
