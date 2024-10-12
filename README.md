@@ -2,6 +2,11 @@
 
 Simple example using webauthn/passkeys as a signin option for aws cognito.
 
+## Prerequesits
+- aws cli
+- cdk cli
+- angular cli
+
 ## install dependencies
 Install dependencies in all lambda functions in ./lambda and for angular frontend example.
 
@@ -10,8 +15,8 @@ sign in to your aws account and create an iam user with administrator access
 use aws cli to create a profile
 `aws configure --profile default`
 
-run cdk bootstrap
-run cdk deploy
+run `cdk bootstrap`
+run `cdk deploy`
 
 ## Angualar frontend example
 Install @angular/cli globally
